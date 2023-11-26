@@ -1,0 +1,413 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{72F2D9D4-FBC9-48C6-8499-7CF3A478ABE5}</ProjectGuid>
+			<ProjectVersion>13.4</ProjectVersion>
+			<FrameworkType>VCL</FrameworkType>
+			<MainSource>DriveLEDs.cpp</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Release</Config>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>1</TargetedPlatforms>
+			<AppType>Application</AppType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+			<Cfg_1_Win32>true</Cfg_1_Win32>
+			<CfgParent>Cfg_1</CfgParent>
+			<Cfg_1>true</Cfg_1>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<VerInfo_MajorVer>2</VerInfo_MajorVer>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=2.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Manifest_File>None</Manifest_File>
+			<VerInfo_Locale>1049</VerInfo_Locale>
+			<PackageImports>bindcompfmx;fmx;rtl;dbrtl;IndySystem;DbxClientDriver;bindcomp;inetdb;DBXInterBaseDriver;xmlrtl;DbxCommonDriver;IndyProtocols;DBXMySQLDriver;dbxcds;bindengine;soaprtl;dsnap;IndyCore;fmxase;inet;fmxobj;inetdbxpress;fmxdae;dbexpress;$(PackageImports)</PackageImports>
+			<Multithreaded>true</Multithreaded>
+			<ILINK_LibraryPath>$(BDS)\source\vcl\jpg\src\;..\..\tiff-4.3.0\libtiff\;DriveLEDs\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ProjectType>CppVCLApplication</ProjectType>
+			<DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;$(DCC_Namespace)</DCC_Namespace>
+			<Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
+			<IncludePath>$(BDS)\source\vcl\jpg\src\;..\..\tiff-4.3.0\libtiff\;DriveLEDs\;C:\Users\Zav\Documents\RAD Studio\tiff-4.3.0\libtiff;c:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\;$(IncludePath)</IncludePath>
+			<AllPackageLibs>rtl.lib;vcl.lib;Tee.lib;vclimg.lib;frx16.lib;fs16.lib;vclx.lib;frxe16.lib;dbrtl.lib;bdertl.lib</AllPackageLibs>
+			<_TCHARMapping>wchar_t</_TCHARMapping>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<IntermediateOutputDir>.\$(Platform)\$(Config)</IntermediateOutputDir>
+			<FinalOutputDir>.\$(Platform)\$(Config)</FinalOutputDir>
+			<BCC_wpar>false</BCC_wpar>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<BCC_ExtendedErrorInfo>true</BCC_ExtendedErrorInfo>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\release\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<PackageImports>vcldbx;frx16;TeeDB;Rave100VCL;vclib;Tee;inetdbbde;ibxpress;vclimg;frxDB16;intrawebdb_120_160;fs16;TeeUI;FMXTee;vclactnband;vcldb;vcldsnap;bindcompvcl;vclie;vcltouch;Intraweb_120_160;bcbsmp;websnap;vclribbon;frxe16;VclSmp;fsDB16;vcl;CloudService;CodeSiteExpressPkg;FmxTeeUI;dsnapcon;vclx;webdsnap;bdertl;adortl;bcbie;$(PackageImports)</PackageImports>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<IncludePath>$(BDSINCLUDE)\windows\vcl;$(IncludePath)</IncludePath>
+			<DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<ILINK_LibraryPath>C:\Users\Zav\Documents\RAD Studio\Projects\DriveLEDs\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BCC_OptimizeForSpeed>false</BCC_OptimizeForSpeed>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+			<Defines>_DEBUG;$(Defines)</Defines>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+			<BCC_UseRegisterVariables>None</BCC_UseRegisterVariables>
+			<DCC_Define>DEBUG</DCC_Define>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<BCC_StackFrames>true</BCC_StackFrames>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<ILINK_TranslatedLibraryPath>$(BDSLIB)\$(PLATFORM)\debug\$(LANGDIR);$(ILINK_TranslatedLibraryPath)</ILINK_TranslatedLibraryPath>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+			<LinkPackageStatics>rtl.lib;vcl.lib;Tee.lib;vclimg.lib;frx16.lib;fs16.lib;vclx.lib;frxe16.lib;dbrtl.lib;bdertl.lib</LinkPackageStatics>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<Defines>NDEBUG;$(Defines)</Defines>
+			<TASM_Debugging>None</TASM_Debugging>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<VerInfo_MajorVer>3</VerInfo_MajorVer>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=3.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<Icon_MainIcon>CameraIcon.ico</Icon_MainIcon>
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<UsePackages>false</UsePackages>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<LinkPackageStatics>rtl.lib;vcl.lib;Tee.lib;vclimg.lib;frx16.lib;fs16.lib;vclx.lib;frxe16.lib;dbrtl.lib;bdertl.lib</LinkPackageStatics>
+		</PropertyGroup>
+		<ItemGroup>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcapimin.c">
+				<BuildOrder>16</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcapistd.c">
+				<BuildOrder>27</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jccoefct.c">
+				<BuildOrder>38</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jccolor.c">
+				<BuildOrder>30</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcdctmgr.c">
+				<BuildOrder>33</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jchuff.c">
+				<BuildOrder>37</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcinit.c">
+				<BuildOrder>28</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcmainct.c">
+				<BuildOrder>39</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcmarker.c">
+				<BuildOrder>21</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcmaster.c">
+				<BuildOrder>29</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcomapi.c">
+				<BuildOrder>20</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcparam.c">
+				<BuildOrder>26</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcphuff.c">
+				<BuildOrder>36</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcprepct.c">
+				<BuildOrder>32</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jcsample.c">
+				<BuildOrder>31</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdapimin.c">
+				<BuildOrder>23</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdapistd.c">
+				<BuildOrder>40</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdcoefct.c">
+				<BuildOrder>54</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdcolor.c">
+				<BuildOrder>45</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jddctmgr.c">
+				<BuildOrder>48</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdhuff.c">
+				<BuildOrder>53</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdinput.c">
+				<BuildOrder>25</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdmainct.c">
+				<BuildOrder>55</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdmarker.c">
+				<BuildOrder>24</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdmaster.c">
+				<BuildOrder>41</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdmerge.c">
+				<BuildOrder>44</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdphuff.c">
+				<BuildOrder>49</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdpostct.c">
+				<BuildOrder>47</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jdsample.c">
+				<BuildOrder>46</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jerror.c">
+				<BuildOrder>22</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jfdctflt.c">
+				<BuildOrder>35</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jfdctfst.c">
+				<BuildOrder>35</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jidctflt.c">
+				<BuildOrder>52</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jidctfst.c">
+				<BuildOrder>51</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jidctred.c">
+				<BuildOrder>50</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jmemmgr.c">
+				<BuildOrder>17</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jmemnobs.c">
+				<BuildOrder>18</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jquant1.c">
+				<BuildOrder>42</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jquant2.c">
+				<BuildOrder>43</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="C:\Program Files (x86)\Embarcadero\RAD Studio\9.0\source\vcl\jpg\src\jutils.c">
+				<BuildOrder>19</BuildOrder>
+			</CppCompile>
+			<LibFiles Condition="'$(Platform)'=='Win32'" Include="atmcd32d.lib">
+				<BuildOrder>4</BuildOrder>
+				<IgnorePath>true</IgnorePath>
+			</LibFiles>
+			<CppCompile Include="BrtTimeCours.cpp">
+				<Form>RoiGraph</Form>
+				<FormType>dfm</FormType>
+				<DependentOn>BrtTimeCours.h</DependentOn>
+				<BuildOrder>6</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="DriveLEDs.cpp">
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="Graphs.cpp">
+				<Form>GraphImag</Form>
+				<DependentOn>Graphs.h</DependentOn>
+				<BuildOrder>6</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="LedCamControl.cpp">
+				<DependentOn>LedCamControl.h</DependentOn>
+				<BuildOrder>5</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="ThorAndor.cpp">
+				<Form>ATManage</Form>
+				<DependentOn>ThorAndor.h</DependentOn>
+				<BuildOrder>5</BuildOrder>
+			</CppCompile>
+			<LibFiles Condition="'$(Platform)'=='Win32'" Include="TLDC4100_32.lib">
+				<BuildOrder>2</BuildOrder>
+				<IgnorePath>true</IgnorePath>
+			</LibFiles>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_aux.c">
+				<BuildOrder>12</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_close.c">
+				<BuildOrder>72</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_codec.c">
+				<BuildOrder>64</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_compress.c">
+				<BuildOrder>9</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_dir.c">
+				<BuildOrder>14</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_dirinfo.c">
+				<BuildOrder>61</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_dirread.c">
+				<BuildOrder>59</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_dirwrite.c">
+				<BuildOrder>58</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_dumpmode.c">
+				<BuildOrder>65</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_error.c">
+				<BuildOrder>10</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_flush.c">
+				<BuildOrder>57</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_jpeg.c">
+				<BuildOrder>15</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_lzw.c">
+				<BuildOrder>66</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_next.c">
+				<BuildOrder>70</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_ojpeg.c">
+				<BuildOrder>71</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_open.c">
+				<BuildOrder>8</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_packbits.c">
+				<BuildOrder>68</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_predict.c">
+				<BuildOrder>67</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_read.c">
+				<BuildOrder>14</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_strip.c">
+				<BuildOrder>11</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_swab.c">
+				<BuildOrder>60</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_thunder.c">
+				<BuildOrder>69</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_tile.c">
+				<BuildOrder>62</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_warning.c">
+				<BuildOrder>63</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_win32.c">
+				<BuildOrder>7</BuildOrder>
+			</CppCompile>
+			<CppCompile Include="..\..\tiff-4.3.0\libtiff\tif_write.c">
+				<BuildOrder>56</BuildOrder>
+			</CppCompile>
+			<FormResources Include="BrtTimeCours.dfm"/>
+			<FormResources Include="ThorAndor.dfm"/>
+			<FormResources Include="Graphs.dfm"/>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppVCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<Source>
+						<Source Name="MainSource">DriveLEDs.cpp</Source>
+					</Source>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp160.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</CPlusPlusBuilder.Personality>
+				<Deployment/>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')" Project="$(BDS)\Bin\CodeGear.Cpp.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>
